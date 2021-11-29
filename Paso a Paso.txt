@@ -1,0 +1,11 @@
+P1: npm install --save newsapi
+P2: npm install --save @ionic/storage
+P3: npm install --save @ionic/storage-angular
+P4: Descargar JDK y SDK
+P5: npm install @capacitor/android
+P6: npm install @capacitor/core
+P7: npm install @capacitor/cli --save-dev
+P8: ionic build
+P9: npx cap add android
+P10: npx cap open android
+PX: npm run e2e

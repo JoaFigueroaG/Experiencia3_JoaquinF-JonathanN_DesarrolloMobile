@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="danger">Registrarse</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="/inicio" text="back" color="danger" >
+
+      </ion-back-button>
+
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-button (click)="mM()" color="danger">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #formulario="ngForm" (ngSubmit) ="onSubmit()">
+
+    <!--<ion-list-header>
+      <ion-label>Validacion del registro [{{formulario.valid}}]</ion-label>
+    </ion-list-header>-->
+<br>
+      <ion-item>
+        <ion-label color="danger" position="floating">Usuario</ion-label>
+        <ion-input clearInput required  color="danger" type="text" placeholder="Ingrese sus datos" name="user"
+        [(ngModel)]= "usuario.user"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label color="danger" position="floating">Correo Electronico</ion-label>
+        <ion-input clearInput required color="danger" type="email" placeholder="Ingrese sus datos" name="email"
+        [(ngModel)]= "usuario.email"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label color="danger" position="floating">Contraseña</ion-label>
+        <ion-input clearInput required color="danger" type="password" placeholder="Ingrese sus datos" name="pass"
+        [(ngModel)]= "usuario.pass"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label color="danger" position="floating">Año de Nacimiento</ion-label>
+        <ion-input clearInput required color="danger" type="date" placeholder="Ingrese sus datos" name="nacimiento"
+        [(ngModel)]= "usuario.nacimiento"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label color="danger" position="floating">Telefono</ion-label>
+        <ion-input clearInput required color="danger" maxlength="8" minlength="12" type="number" placeholder="Ingrese sus datos" name="telefono"
+        [(ngModel)]= "usuario.telefono"></ion-input>
+      </ion-item>
+
+      <br>  
+      <ion-button [disabled]="formulario.invalid"
+      color="danger"expand="block" fill="clear" shape="round" color="danger" routerLink="/inicio" type="submit">
+        Entrar
+      </ion-button>
+  </form>
+</ion-content>
